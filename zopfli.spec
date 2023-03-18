@@ -3,15 +3,18 @@
 %define pnglibname %mklibname zopflipng
 %define devname %mklibname zopfli -d
 
+%global optflags %{optflags} -O3
+
 Name: zopfli
 Version: 1.0.3
-Release: 1
+Release: 2
 Source0: https://github.com/google/zopfli/archive/refs/tags/zopfli-%{version}.tar.gz
 Summary: Library to perform very good but slow deflate (zlib) compression
 URL: https://github.com/google/zopfli
 License: Apache-2.0
 Group: System/Libraries
-BuildRequires: cmake ninja
+BuildRequires: cmake
+BuildRequires: ninja
 BuildRequires: pkgconfig(zlib)
 
 %description
@@ -40,7 +43,7 @@ Requires: %{pnglibname} = %{EVRD}
 %description -n %{devname}
 Development files (Headers etc.) for %{name}.
 
-Library to perform very good but slow deflate (zlib) compression
+Library to perform very good but slow deflate (zlib) compression.
 
 %prep
 %autosetup -p1 -n %{name}-%{name}-%{version}
