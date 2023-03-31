@@ -7,7 +7,7 @@
 
 Name: zopfli
 Version: 1.0.3
-Release: 2
+Release: 3
 Source0: https://github.com/google/zopfli/archive/refs/tags/zopfli-%{version}.tar.gz
 Summary: Library to perform very good but slow deflate (zlib) compression
 URL: https://github.com/google/zopfli
